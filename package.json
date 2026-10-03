@@ -1,0 +1,10 @@
+{
+  "name": "csit340g8-lab3-quinaging-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ./CSIT340G8-Lab3-Quinaging run dev",
+    "build": "npm --prefix ./CSIT340G8-Lab3-Quinaging run build",
+    "lint": "npm --prefix ./CSIT340G8-Lab3-Quinaging run lint",
+    "preview": "npm --prefix ./CSIT340G8-Lab3-Quinaging run preview"
+  }
+}

@@ -182,3 +182,41 @@
     border-right-color: var(--border);
   }
 }
+
+.student-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: auto 24px 24px;
+  padding: 18px 22px;
+  border: 1px solid #d8e1ec;
+  border-left: 4px solid #315f8f;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #f3f7fc, #ffffff);
+  box-shadow: 0 8px 24px rgba(31, 54, 82, 0.08);
+  color: #26384d;
+  text-align: left;
+}
+
+.footer-label {
+  color: #59718c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.student-footer p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .student-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto 16px 16px;
+    padding: 16px;
+  }
+}

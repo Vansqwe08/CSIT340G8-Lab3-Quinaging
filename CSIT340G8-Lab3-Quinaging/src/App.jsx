@@ -8,31 +8,29 @@ const Part = ({ name, units }) => (
   </p>
 )
 
-const Content = ({ parts }) => (
+const Content = ({ part1, part2, part3 }) => (
   <div>
-    {parts.map((part) => (
-      <Part key={part.name} name={part.name} units={part.units} />
-    ))}
+    <Part name={part1.name} units={part1.units} />
+    <Part name={part2.name} units={part2.units} />
+    <Part name={part3.name} units={part3.units} />
   </div>
 )
 
-const Total = ({ parts }) => (
-  <p>Number of units {parts.reduce((sum, part) => sum + part.units, 0)}</p>
+const Total = ({ part1, part2, part3 }) => (
+  <p>Number of units {part1.units + part2.units + part3.units}</p>
 )
 
 const App = () => {
   const course = 'Information Technology'
-  const parts = [
-    { name: 'CSIT321', units: 3 },
-    { name: 'CSIT327', units: 3 },
-    { name: 'IT365', units: 3 },
-  ]
+  const part1 = { name: 'CSIT321', units: 3 }
+  const part2 = { name: 'CSIT327', units: 3 }
+  const part3 = { name: 'IT365', units: 3 }
 
   return (
     <main>
       <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Content part1={part1} part2={part2} part3={part3} />
+      <Total part1={part1} part2={part2} part3={part3} />
     </main>
   )
 }
